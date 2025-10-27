@@ -68,7 +68,7 @@ public class ConsoleRunner implements CommandLineRunner {
             return;
         }
         models.forEach(m -> {
-            String brandName = m.getBrand() != null ? m.getBrand().getName() : "<no-brand>";
+            String brandName = m.getBrand().getName();
             System.out.printf("- %s [id=%s, year=%d, brand=%s]%n",
                     m.getName(), m.getId(), m.getProductionYear(), brandName);
         });

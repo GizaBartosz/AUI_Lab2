@@ -7,7 +7,6 @@ import java.util.*;
 
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, UUID> {
-    boolean existsByNameIgnoreCase(String name);
 
     @Query("select distinct b from Brand b left join fetch b.models")
     List<Brand> findAllWithModels();

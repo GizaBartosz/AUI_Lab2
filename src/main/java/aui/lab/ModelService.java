@@ -16,7 +16,6 @@ public class ModelService {
         return repo.findAllWithBrand();
     }
 
-    public List<Model> findByBrand(UUID brandId) { return repo.findByBrandId(brandId); }
     public Optional<Model> findById(UUID id) { return repo.findById(id); }
     public Model save(Model m) { return repo.save(m); }
     public void deleteById(UUID id) { repo.deleteById(id); }
